@@ -1,4 +1,5 @@
 import random
+import re
 
 
 def rectangle():
@@ -26,9 +27,21 @@ def game():
             print("The secret number is lower")
 
 
-# def search():
-#
-#
+def search():
+    text= []
+    with open('./Files/cms_logs.txt', 'r') as f:
+        for line in f:
+            if 'Apr 5' or 'Apr 6' or 'Apr 7' in line:
+                if 'joined conference' in line:
+                    a = re.findall(r'\w+\s+\d+\s+\d+:\d+:\d+\.\d+', line)
+                    b = re.findall(r'\"+\w+\s+\w+\"+', line)
+                    c = re.findall(r'\w+\s+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+', line)
+                    text.append(a+b+c)
+
+    with open('./Files/logged.txt', 'w') as fr:
+        for element in text:
+            fr.write(str(element)+'\n')
+
 
 def main():
     x = int(input())
@@ -42,9 +55,6 @@ def main():
         print("poop")
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
     exit(0)
-
-
-
