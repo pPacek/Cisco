@@ -1,0 +1,17 @@
+The rectangle printer
+
+Create a function that would print a rectangle of stars. 
+The functions will take two parameters : The width and the height.
+def print_rectangle(width:int,height:int)
+
+Example : print_rectangle(5,3) would print this : 
+*****
+*****
+*****
+
+print_rectangle(2,5) would print this : 
+**
+**
+**
+**
+**

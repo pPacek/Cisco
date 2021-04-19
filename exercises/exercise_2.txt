@@ -1,0 +1,61 @@
+The guess number game
+
+Context:
+Your company just signed a contract for a game that will make billions of dollars, and you must develop that game in Python.
+The game is simple: The game generates a random number between 1 and 100, and the user needs to enter a number until it finds the good one.
+You are not convinced the game will generates billions of dollars, but your CEO seems to be convinced.
+
+Instructions:
+
+The game asks the user to enter a number, and provide 3 different outputs based on the number provided by the user:
+
+- The secret number is higher
+Please enter a number:
+
+- The secret number is lower
+Please enter a number:
+
+- Well done, you found the number !
+
+
+Example of an execution: 
+Let's say the generated number is 15.
+
+The game prints:
+Welcome to the guess number 
+Please enter a number:
+
+The user enters 25.
+
+The game prints: 
+The secret number is lower
+Please enter a number: 
+
+The user enters 2.
+
+The script prints: 
+The secret number is higher
+Please enter a number:
+
+The user enters 15
+
+The script prints:
+Well done, you found the number !
+
+And the script ends.
+
+Challenge : Add two more outputs:
+The secret number is *slightly* more
+The secret number is *slightly* less
+
+Hint 1 : Try to find yourself how to generate a number and how to ask for input.
+
+Hint 2 : Generate a random number between 1 and 100: 
+import random
+n = random.randint(0,100)
+ask for input : 
+
+Hint 3 : Ask for input:
+user_number = input()
+
+Hint 4 : The input will be a string. You need to make it a integer :) 

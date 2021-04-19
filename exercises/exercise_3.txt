@@ -1,0 +1,21 @@
+CMS webbridge 3 participant detector
+
+Context : 
+You need to provide the management with details about users joining conferences using the webbridge 3.
+The manager asked you to report to him any participant that joined a conference with the webbridge 3 between April 5 and April 7(included).
+He only provided you a cms_logs.txt file for this. The manager needs this information for yesterday and threatens to fire you if you can't find the info.
+
+Instructions :
+Using the file cms_logs.txt, detect any participant joining a conference via webbridge version 3 between april 5 and april 7, and print the following information for each occurrence:
+- Name of the participant joining the conference
+- Date and time when the participant joined
+
+A participant joining via webbridge 3 would print such a line in the log file :
+Apr  7 14:12:24.456 user.info cms1 host:server:  INFO : participant "guestxxxx" (757f0c86-1159-4c53-873e-a8a241b4fbb8) joined conference c9060275-e468-512f-8442-8d841212b5a4 via WB3 
+
+
+Want some challenge ? Store these information into a file "report.txt" and provide it to the manager so he doesn't fire you.
+Even more challenge ?! Also store the conference name that was joined (Not ID, name... ;) ). 
+
+Hint1 : First, store the lines in a list, and then filter and exract the proper information by iterating the list.
+Hint2 : Store the information you retrieved with hint1 in a dicionnary.
