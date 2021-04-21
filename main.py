@@ -28,20 +28,34 @@ def game():
 
 
 def search():
-    text= []
+    text = []
+    confdict = {}
+    logdict = {}
     with open('./Files/cms_logs.txt', 'r') as f:
         for line in f:
-            if 'Apr 5' or 'Apr 6' or 'Apr 7' in line:
-                if 'joined conference' in line:
-                    a = re.findall(r'\w+\s+\d+\s+\d+:\d+:\d+\.\d+', line)
-                    b = re.findall(r'\"+\w+\s+\w+\"+', line)
-                    c = re.findall(r'\w+\s+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+', line)
-                    text.append(a+b+c)
+            if 'conference' in line and 'named' in line:
+                cid = str(re.findall(r'[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+\-+[a-z0-9]+', line))
+                name = re.findall(r'named "(.*)"', line)
+                for i in name:
+                    confdict[cid] = i
+
+    with open('./Files/cms_logs.txt', 'r') as f:
+        for linia in f:
+            if 'Apr 5' or 'Apr 6' or 'Apr 7' in linia:
+                if 'joined conference' in linia:
+                    a = re.findall(r'\w+\s+\d+\s+\d+:\d+:\d+\.\d+', linia)
+                    b = re.findall(r'"(.*)"', linia)
+                    c = str(re.findall(r'conference (.*) via', linia))
+                    for j in a:
+                        logdict['time'] = j
+                    for k in b:
+                        logdict['name'] = k
+                    logdict['conference'] = confdict[c]
+                    text.append(logdict)
 
     with open('./Files/logged.txt', 'w') as fr:
         for element in text:
-            fr.write(str(element)+'\n')
-
+            fr.write(str(element) + '\n')
 
 def main():
     x = int(input())

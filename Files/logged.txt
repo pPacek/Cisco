@@ -1,4 +1,4 @@
-['Apr  5 19:09:20.133', '"Serj Tankian"', 'conference c9060275-e468-502f-8474-8d841277b5a4']
-['Apr  6 22:13:17.269', '"Michael Jackson"', 'conference c9060275-e468-492f-8474-8d841277b5a4']
-['Apr  7 08:07:09.269', '"Brad Pitt"', 'conference c9060275-e468-492f-8474-8d841277b5a4']
-['Apr  7 08:07:24.456', '"Will Smith"', 'conference c9060275-e468-492f-8474-8d841277b5a4']
+{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
+{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
+{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
+{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
