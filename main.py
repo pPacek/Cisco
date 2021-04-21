@@ -40,22 +40,25 @@ def search():
                     confdict[cid] = i
 
     with open('./Files/cms_logs.txt', 'r') as f:
-        for linia in f:
-            if 'Apr 5' or 'Apr 6' or 'Apr 7' in linia:
-                if 'joined conference' in linia:
-                    a = re.findall(r'\w+\s+\d+\s+\d+:\d+:\d+\.\d+', linia)
-                    b = re.findall(r'"(.*)"', linia)
-                    c = str(re.findall(r'conference (.*) via', linia))
+        for line in f:
+            if 'Apr 5' or 'Apr 6' or 'Apr 7' in line:
+                if 'joined conference' in line:
+                    a = re.findall(r'\w+\s+\d+\s+\d+:\d+:\d+\.\d+', line)
+                    b = re.findall(r'"(.*)"', line)
+                    c = str(re.findall(r'conference (.*) via', line))
                     for j in a:
                         logdict['time'] = j
                     for k in b:
                         logdict['name'] = k
                     logdict['conference'] = confdict[c]
-                    text.append(logdict)
+                    for x, y in logdict.items():
+                        z = f"{x} : {y} "
+                        text.append(z)
+                    text.append('\n')
 
-    with open('./Files/logged.txt', 'w') as fr:
+    with open('./Files/logged.txt', 'w') as f:
         for element in text:
-            fr.write(str(element) + '\n')
+            f.write(str(element) + '\n')
 
 def main():
     x = int(input())

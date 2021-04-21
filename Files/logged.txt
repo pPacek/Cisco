@@ -1,4 +1,20 @@
-{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
-{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
-{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
-{'time': 'Apr  7 08:07:24.456', 'name': 'Will Smith', 'conference': 'G20 meeting'}
+time : Apr  5 19:09:20.133 
+name : Serj Tankian 
+conference : System of a down meeting 
+
+
+time : Apr  6 22:13:17.269 
+name : Michael Jackson 
+conference : G20 meeting 
+
+
+time : Apr  7 08:07:09.269 
+name : Brad Pitt 
+conference : G20 meeting 
+
+
+time : Apr  7 08:07:24.456 
+name : Will Smith 
+conference : G20 meeting 
+
+
